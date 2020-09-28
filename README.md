@@ -6,3 +6,5 @@ Net core is run on all systems.
 Missing:
  - Tools to verify data before upload.
  
+
+Link for json files: [look here](https://github.com/DeiC-HPC/HPCMonitorData/tree/master/DeiC%20HPC%20Usage%20Data)

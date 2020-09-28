@@ -1,0 +1,18 @@
+{ // Person
+  "orcid": null,
+  "deicProjectId": "00000000-0000-0000-0000-000000000000",
+  "hpcCenterId": "00000000-0000-0000-0000-000000000000",
+  "subHPCCenterId": "00000000-0000-0000-0000-000000000000",
+  "universityId": 0,
+  "accessType": 0,
+  "accessStartDate": "0001-01-01T00:00:00",
+  "accessEndDate": "0001-01-01T00:00:00",
+  "cpuCoreTimeAssigned": 0,
+  "cpuCoreTimeUsed": 0,
+  "gpuCoreTimeAssigned": 0,
+  "gpuCoreTimeUsed": 0,
+  "storageAssignedInMB": 0,
+  "storageUsedInMB": 0,
+  "nodeTimeAssigned": 0,
+  "nodeTimeUsed": 0
+}

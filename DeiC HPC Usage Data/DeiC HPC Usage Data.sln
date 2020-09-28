@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeiC HPC Usage Data", "DeiC HPC Usage Data\DeiC HPC Usage Data.csproj", "{FA9694F8-EEBC-4F7C-9CC8-1D9E0CA42269}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA9694F8-EEBC-4F7C-9CC8-1D9E0CA42269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9694F8-EEBC-4F7C-9CC8-1D9E0CA42269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9694F8-EEBC-4F7C-9CC8-1D9E0CA42269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9694F8-EEBC-4F7C-9CC8-1D9E0CA42269}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85C964D0-33C5-4104-87C7-73D9AF1D959C}
+	EndGlobalSection
+EndGlobal

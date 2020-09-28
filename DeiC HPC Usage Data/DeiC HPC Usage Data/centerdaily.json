@@ -1,18 +1,20 @@
-{ // CenterDaily
-  "hpcCenterId": "00000000-0000-0000-0000-000000000000",
-  "subHPCCenterId": "00000000-0000-0000-0000-000000000000",
-  "date": "0001-01-01T00:00:00",
-  "orcid": null,
-  "deicProjectId": "00000000-0000-0000-0000-000000000000",
-  "universityId": 0,
-  "accessType": 0,
-  "maxCPUCoreTime": 0,
-  "usedCPUCoretime": 0,
-  "maxGPUCoreTime": 0,
-  "usedGPUCoretime": 0,
-  "storageUsedInGB": 0,
-  "networkUsageInGB": 0,
-  "networkAvgUsage": 0.0,
-  "maxNodeTime": 0,
-  "usedNoteTime": 0
-}
+[
+  { // CenterDaily
+    "hpcCenterId": "00000000-0000-0000-0000-000000000000",
+    "subHPCCenterId": "00000000-0000-0000-0000-000000000000",
+    "date": "0001-01-01T00:00:00",
+    "orcid": null,
+    "deicProjectId": "00000000-0000-0000-0000-000000000000",
+    "universityId": 0,
+    "accessType": 0,
+    "maxCPUCoreTime": 0,
+    "usedCPUCoretime": 0,
+    "maxGPUCoreTime": 0,
+    "usedGPUCoretime": 0,
+    "storageUsedInGB": 0,
+    "networkUsageInGB": 0,
+    "networkAvgUsage": 0.0,
+    "maxNodeTime": 0,
+    "usedNoteTime": 0
+  }
+]

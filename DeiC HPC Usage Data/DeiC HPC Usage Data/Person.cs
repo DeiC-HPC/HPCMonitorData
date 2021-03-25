@@ -35,12 +35,16 @@ namespace DeiC_HPC_Usage_Data
         public AccessType AccessType { get; set; }
         /*
          * Access start time in ISO 8601 format.
+         * Please ensure to a correct ISO8601-1:2019 date format.
+         * Access time https://en.wikipedia.org/wiki/ISO_8601
          */
         public DateTime AccessStartDate { get; set; }
         /*
          * Access end time in ISO 8601 format.
-         */ 
-        public DateTime AccessEndDate { get; set; }
+         * Please ensure to a correct ISO8601-1:2019 date format.
+         * Access end time https://en.wikipedia.org/wiki/ISO_8601
+         */
+        public DateTime? AccessEndDate { get; set; }
         /*
          * Assigned CPU core time in hours
          */
@@ -68,10 +72,10 @@ namespace DeiC_HPC_Usage_Data
         /*
          * Assigned node time. For Type 4 only as they do not have CPU/GPU core times.
          */
-        public ulong NodeTimeAssigned { get; set; }
+        public ulong? NodeTimeAssigned { get; set; }
         /*
          * Used node time. For Type 4 only as they do not have CPU/GPU core times.
          */
-        public ulong NodeTimeUsed { get; set; }
+        public ulong? NodeTimeUsed { get; set; }
     }
 }

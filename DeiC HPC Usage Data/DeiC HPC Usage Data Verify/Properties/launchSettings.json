@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DeiC HPC Usage Data Verify": {
+      "commandName": "Project",
+      "commandLineArgs": "--center \"C:/Users/eske/OneDrive - Danmarks Tekniske Universitet/Dokumenter/National HPC Center/usagedata/report 1/Type 1 version 2/CenterDaily.json\" --person \"C:/Users/eske/OneDrive - Danmarks Tekniske Universitet/Dokumenter/National HPC Center/usagedata/report 1/Type 1 version 2/Person.json\""
+    }
+  }
+}

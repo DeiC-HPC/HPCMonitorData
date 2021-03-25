@@ -14,6 +14,9 @@ namespace DeiC_HPC_Usage_Data
         public Guid SubHPCCenterId { get; set; }
         /*
          * Date for the entry in ISO 8601 format.
+         * Please ensure to a correct ISO8601-1:2019 date format.
+         * Access time https://en.wikipedia.org/wiki/ISO_8601
+         * As this pr day. Time format should just be 00:00:01 etc or just anotner time of the day.
          */
         public DateTime Date { get; set; }
         /*
@@ -60,19 +63,19 @@ namespace DeiC_HPC_Usage_Data
         /*
         * Network usage in MB
         */
-        public ulong NetworkUsageInMB { get; set; }
+        public ulong? NetworkUsageInMB { get; set; }
         /*
          * Network avg in Mbps
          */
-        public double NetworkAvgUsage { get; set; }
+        public double? NetworkAvgUsage { get; set; }
         /*
          * Max node time. For Type 4 only as they do not have CPU/GPU core times.
          */
-        public ulong MaxNodeTime { get; set; }
+        public ulong? MaxNodeTime { get; set; }
         /*
          * Used node time. For Type 4 only as they do not have CPU/GPU core times.
          */
-        public ulong UsedNoteTime { get; set; }
+        public ulong? UsedNoteTime { get; set; }
     }
 
 }

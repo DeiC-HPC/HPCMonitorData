@@ -14,10 +14,14 @@ namespace DeiC_HPC_Usage_Data
         public Guid SubHPCCenterId { get; set; }
         /*
         * Start time report periode in ISO 8601 format.
+        * Please ensure to a correct ISO8601-1:2019 date format.
+         * Access time https://en.wikipedia.org/wiki/ISO_8601
         */
         public DateTime StartPeriode { get; set; }
         /*
         * End time report periode in ISO 8601 format.
+        * Please ensure to a correct ISO8601-1:2019 date format.
+         * Access time https://en.wikipedia.org/wiki/ISO_8601
         */
         public DateTime EndPeriode { get; set; }
         /*

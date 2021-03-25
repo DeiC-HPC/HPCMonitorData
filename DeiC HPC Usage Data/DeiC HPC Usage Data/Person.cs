@@ -6,12 +6,15 @@ namespace DeiC_HPC_Usage_Data
     {
         /*
          * User must have a ORCID. This needs to be collected when loging in.
+         * Please use: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
+         * It is based on https://www.iso.org/standard/44292.html
          */
         public string ORCID { get; set; }
         /*
          * Each project that are assigned usage time have a generated project id. The format of the ID is GUID.
+         * Change: From GUID to follow the DeiC project format: https://www.deic.dk/en/Supercomputing/Instructions-and-Guides/Remember-to-acknowledge-the-use-of-national-hpc
          */
-        public Guid DEICProjectId { get; set; }
+        public string DEICProjectId { get; set; }
         /*
          * Each HPC center has a unique ID. This is defined as a GUID
          */
@@ -26,6 +29,8 @@ namespace DeiC_HPC_Usage_Data
         public UniversityId UniversityId { get; set; }
         /*
          * Each access type is defined as a constand.
+         * The access type can be read from the project id also. It is part of basic data type to enable better filtering
+         * See AccessType datatype.
          */
         public AccessType AccessType { get; set; }
         /*

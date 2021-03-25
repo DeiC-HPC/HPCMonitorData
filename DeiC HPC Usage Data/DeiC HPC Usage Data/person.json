@@ -1,7 +1,7 @@
 [
   { // Person
-    "orcid": null,
-    "deicProjectId": "00000000-0000-0000-0000-000000000000",
+    "orcid": "0000-0000-0000-0000",
+    "deicProjectId": "DeiC-XX-Y-NUMBER",
     "hpcCenterId": "00000000-0000-0000-0000-000000000000",
     "subHPCCenterId": "00000000-0000-0000-0000-000000000000",
     "universityId": 0,

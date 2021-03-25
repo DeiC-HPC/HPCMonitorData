@@ -6,15 +6,13 @@ using System.CommandLine.Invocation;
 using System.IO;
 using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace DeiC_HPC_Usage_Data_Verify
 {
-
-
-
     class Program
     {
-        static int Main(string[] args)
+        static async Task<int> Main(string[] args)
         {
             var rootCommand = new RootCommand
             {
@@ -32,9 +30,9 @@ namespace DeiC_HPC_Usage_Data_Verify
             // Note that the parameters of the handler method are matched according to the names of the options
             rootCommand.Handler = CommandHandler.Create<FileInfo, FileInfo, bool>(HandleInput);
             // Parse the incoming args and invoke the handler
-            return rootCommand.InvokeAsync(args).Result;
+            return await rootCommand.InvokeAsync(args);
         }
-        public static void HandleInput(FileInfo center, FileInfo person, bool laxDateTimeParse)
+        public static async Task HandleInput(FileInfo center, FileInfo person, bool laxDateTimeParse)
         {
             if (!center?.Exists ?? false)
             {
@@ -84,7 +82,7 @@ namespace DeiC_HPC_Usage_Data_Verify
                 return;
             }
 
-
+            await new VerifyJsonData(persons, centerDailies).Check();
 
         }
 

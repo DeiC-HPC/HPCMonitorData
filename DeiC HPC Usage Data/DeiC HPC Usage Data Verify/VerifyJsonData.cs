@@ -75,6 +75,18 @@ namespace DeiC_HPC_Usage_Data_Verify
                     }
                 }
 
+                // check access type and university ID is not unknown or not set.
+                foreach (var kv in _centerDailies.Select(x => new Tuple<AccessType, UniversityId, DateTime, string>(x.AccessType, x.UniversityId, x.Date, x.DEICProjectId)))
+                {
+                    if (kv.Item1 == AccessType.UNKNOWN)
+                    {
+                        errMsg.Add(new ErrorMsg() { DataSet = "CenterDaily", Message = $"Access type is unknown at {kv.Item3} for project id {kv.Item3}" });
+                    }
+                    if (kv.Item2 == UniversityId.UNKNOWN)
+                    {
+                        errMsg.Add(new ErrorMsg() { DataSet = "CenterDaily", Message = $"University ID is unknown at {kv.Item3} for project id {kv.Item3}" });
+                    }
+                }
 
                 return errMsg;
             });
@@ -121,6 +133,17 @@ namespace DeiC_HPC_Usage_Data_Verify
                     }
                 }
 
+                foreach (var kv in _persons.Select(x => new Tuple<AccessType, UniversityId, DateTime, string>(x.AccessType, x.UniversityId, x.AccessStartDate, x.DEICProjectId)))
+                {
+                    if (kv.Item1 == AccessType.UNKNOWN)
+                    {
+                        errMsg.Add(new ErrorMsg() { DataSet = "Person", Message = $"Access type is unknown at {kv.Item3} for project id {kv.Item3}" });
+                    }
+                    if (kv.Item2 == UniversityId.UNKNOWN)
+                    {
+                        errMsg.Add(new ErrorMsg() { DataSet = "Person", Message = $"University ID is unknown at {kv.Item3} for project id {kv.Item3}" });
+                    }
+                }
 
 
                 return errMsg;

@@ -80,11 +80,11 @@ namespace DeiC_HPC_Usage_Data_Verify
                 {
                     if (kv.Item1 == AccessType.UNKNOWN)
                     {
-                        errMsg.Add(new ErrorMsg() { DataSet = "CenterDaily", Message = $"Access type is unknown at {kv.Item3} for project id {kv.Item3}" });
+                        errMsg.Add(new ErrorMsg() { DataSet = "CenterDaily", Message = $"Access type is unknown at {kv.Item3} for project id {kv.Item4}" });
                     }
                     if (kv.Item2 == UniversityId.UNKNOWN)
                     {
-                        errMsg.Add(new ErrorMsg() { DataSet = "CenterDaily", Message = $"University ID is unknown at {kv.Item3} for project id {kv.Item3}" });
+                        errMsg.Add(new ErrorMsg() { DataSet = "CenterDaily", Message = $"University ID is unknown at {kv.Item3} for project id {kv.Item4}" });
                     }
                 }
 
@@ -137,11 +137,11 @@ namespace DeiC_HPC_Usage_Data_Verify
                 {
                     if (kv.Item1 == AccessType.UNKNOWN)
                     {
-                        errMsg.Add(new ErrorMsg() { DataSet = "Person", Message = $"Access type is unknown at {kv.Item3} for project id {kv.Item3}" });
+                        errMsg.Add(new ErrorMsg() { DataSet = "Person", Message = $"Access type is unknown at {kv.Item3} for project id {kv.Item4}" });
                     }
                     if (kv.Item2 == UniversityId.UNKNOWN)
                     {
-                        errMsg.Add(new ErrorMsg() { DataSet = "Person", Message = $"University ID is unknown at {kv.Item3} for project id {kv.Item3}" });
+                        errMsg.Add(new ErrorMsg() { DataSet = "Person", Message = $"University ID is unknown at {kv.Item3} for project id {kv.Item4}" });
                     }
                 }
 

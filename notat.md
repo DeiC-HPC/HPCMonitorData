@@ -17,6 +17,7 @@ Dette data er person centeret Man kan her se hvad personen har haft adgang til o
 *	HPC Center ID, hvert national HPC center har et unikt ID.
 *	HPC Center Sub ID, Et national center kan have flere afdelinger. For den interne rapport og se fordelingen mellem disse kan man oplyse et under ID.
 *	Universitet ID, hvert universitet har et ID.
+*	Id Expanded, Hvis man ikke er fra et universitet eller login ikke giver mulighed for at få uni id. Dette felt kan bruges som tekst.
 *	Assing Type, Valgmuligheder: Local, national, sandbox, international, andet.
 *	Access start date, dato for hvornår denne bruger har fået adgang. I ISO 8601 format.
 *	Access end date, dato for hvornår denne bruger ikke har adgang mere. I ISO 8601 format.
@@ -44,18 +45,6 @@ Dette bliver brugt til at se den totale tid i perioden. Det er for at kunne matc
 *	Max Node time, for type 4 vi burger hele knuder.
 *	Actual node time, for type 4
 
-Da HPC centrene ændrer sig over tid, er det nødvendigt at vi kan se hvor mange CPU core osv timer som er det maximale og hvor mange som faktisk pt kan bruges. Det skyldes at knuder kan være nede. Et anlæg kan være nede i en periode osv.
-## Center – next period
-Dette bliver brugt for at kunne bruge de faktuelle tal for resurser i den næste 3 måneder periode. Det skal f.eks. bruges af de enkelte universiteter hvis de vil lave en lokal tildeling f.eks. 4 gange om året. Det kan så også plottes hvad der blev forventet og hvad man fik. Det vil også give centrene mulighed for at planlægge service nedetider osv.
-*	HPC Center ID, hvert national HPC center har et unikt ID
-*	HPC Center Sub ID, Et national center kan have flere afdelinger. For den interne rapport og se fordelingen mellem disse kan man oplyse et under ID. 
-*	Start periode, ISO 8601 for hvornår tal gælder fra (inkl.)
-*	End periode, ISO 8601 for hvornår tal gælder til (inkl.)
-*	Max CPU core time. Hvor mange CPU core timer kan anlægget tilbyde
-*	Max GPU core time, Hvor mange GPU timer kan anlægget tilbyde
-*	Max Storage usage. I GB
-*	Network usage, hvor meget netværk data kan flyttes i perioden. I GB
-*	Max Node time, for type 4 vi burger hele knuder. 
 
 ## Center Daily
 Dette er en log linje pr dag pr center. Man kan følge brugen af et center pr dag. Dette er for at kunne se den daglige brug af centeret hen over hver dag. Data vil være en liste af disse.
@@ -71,6 +60,11 @@ Dette er en log linje pr dag pr center. Man kan følge brugen af et center pr da
 *	Network trafic, avg network trafik. I Mbps/Gbps.
 *	Max Node time, for type 4 vi burger hele knuder.
 *	Actual used node time, for type 4 blev brugt.
+*	Universitet ID, hvert universitet har et ID.
+*	Id Expanded, Hvis man ikke er fra et universitet eller login ikke giver mulighed for at få uni id. Dette felt kan bruges som tekst.
+*	ORCID ID (fortrækkes hvis forskeren har det) eller WAYF-ID. Et unikt ID.
+*	DeiC-HPC Project ID, Dette er et projekt ID. Dette ID skal ses som en gruppe. Det er et unikt ID som f.eks kan deles mellem flere universiteter eller intern i en forsker gruppe.
+
 
 ## Værktøj og kode
 Der vil på https://github.com/DeiC-HPC/HPCMonitorData blive udviklet et sæt af tools til at tjekke data filerne før man sender dem. Det er også muligt at dele tools med som tænkes kan bruges mellem flere center. Licens for kode er EUPL. Udvikling af værktøjer til brug ligger i back-office.

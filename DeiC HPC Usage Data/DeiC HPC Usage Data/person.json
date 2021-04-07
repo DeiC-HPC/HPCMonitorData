@@ -5,6 +5,7 @@
     "hpcCenterId": "00000000-0000-0000-0000-000000000000",
     "subHPCCenterId": "00000000-0000-0000-0000-000000000000",
     "universityId": 0,
+    "idExpanded": "",
     "accessType": 0,
     "accessStartDate": "0001-01-01T00:00:00",
     "accessEndDate": "0001-01-01T00:00:00",

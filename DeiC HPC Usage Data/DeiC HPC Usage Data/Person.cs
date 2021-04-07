@@ -28,6 +28,10 @@ namespace DeiC_HPC_Usage_Data
          */
         public UniversityId UniversityId { get; set; }
         /*
+         * In case of unknown, industry or other is used please specify in the IdExpanded field.
+         */
+        public string IdExpanded { get; set; }
+        /*
          * Each access type is defined as a constand.
          * The access type can be read from the project id also. It is part of basic data type to enable better filtering
          * See AccessType datatype.

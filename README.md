@@ -15,8 +15,9 @@ Link for json files: [look here](https://github.com/DeiC-HPC/HPCMonitorData/tree
 
 [Notat on the fields can be found here](notat.md)
 
-Missing:
- - Tools to verify data before upload.
+Missing
+ - alligned check of data between centerdauky and person
+ - GDPR safe way to get unique user ids
 
 
 

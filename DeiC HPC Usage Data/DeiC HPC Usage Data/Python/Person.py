@@ -47,6 +47,7 @@ def to_class(c: Type[T], x: Any) -> dict:
 @dataclass
 class PersonElement:
     orcid: str
+    localid: str
     deic_project_id: str
     hpc_center_id: UUID
     sub_hpc_center_id: UUID
@@ -68,6 +69,7 @@ class PersonElement:
     def from_dict(obj: Any) -> 'PersonElement':
         assert isinstance(obj, dict)
         orcid = from_str(obj.get("orcid"))
+        localid = from_str(obj.get("localid"))
         deic_project_id = from_str(obj.get("deicProjectId"))
         hpc_center_id = UUID(obj.get("hpcCenterId"))
         sub_hpc_center_id = UUID(obj.get("subHPCCenterId"))
@@ -84,11 +86,12 @@ class PersonElement:
         storage_used_in_mb = from_int(obj.get("storageUsedInMB"))
         node_time_assigned = from_int(obj.get("nodeTimeAssigned"))
         node_time_used = from_int(obj.get("nodeTimeUsed"))
-        return PersonElement(orcid, deic_project_id, hpc_center_id, sub_hpc_center_id, university_id, id_expanded, access_type, access_start_date, access_end_date, cpu_core_time_assigned, cpu_core_time_used, gpu_core_time_assigned, gpu_core_time_used, storage_assigned_in_mb, storage_used_in_mb, node_time_assigned, node_time_used)
+        return PersonElement(orcid, localid, deic_project_id, hpc_center_id, sub_hpc_center_id, university_id, id_expanded, access_type, access_start_date, access_end_date, cpu_core_time_assigned, cpu_core_time_used, gpu_core_time_assigned, gpu_core_time_used, storage_assigned_in_mb, storage_used_in_mb, node_time_assigned, node_time_used)
 
     def to_dict(self) -> dict:
         result: dict = {}
         result["orcid"] = from_str(self.orcid)
+        result["localid"] = from_str(self.localid)
         result["deicProjectId"] = from_str(self.deic_project_id)
         result["hpcCenterId"] = str(self.hpc_center_id)
         result["subHPCCenterId"] = str(self.sub_hpc_center_id)

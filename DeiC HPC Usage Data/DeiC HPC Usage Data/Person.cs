@@ -11,6 +11,11 @@ namespace DeiC_HPC_Usage_Data
          */
         public string ORCID { get; set; }
         /*
+         * A local id for the user. This must be the same for alle logins from that user.
+         * Whe national AAI is ready use the national id. This is the identity provided om the AAI.
+         */
+        public string LocalId { get; set; }
+        /*
          * Each project that are assigned usage time have a generated project id. The format of the ID is GUID.
          * Change: From GUID to follow the DeiC project format: https://www.deic.dk/en/Supercomputing/Instructions-and-Guides/Remember-to-acknowledge-the-use-of-national-hpc
          */
@@ -43,12 +48,6 @@ namespace DeiC_HPC_Usage_Data
          * Access time https://en.wikipedia.org/wiki/ISO_8601
          */
         public DateTime AccessStartDate { get; set; }
-        /*
-         * Access end time in ISO 8601 format.
-         * Please ensure to a correct ISO8601-1:2019 date format.
-         * Access end time https://en.wikipedia.org/wiki/ISO_8601
-         */
-        public DateTime? AccessEndDate { get; set; }
         /*
          * Assigned CPU core time in hours
          */

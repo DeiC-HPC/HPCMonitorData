@@ -50,8 +50,6 @@ class CenterElement:
     max_gpu_core_time: int
     used_gpu_coretime: int
     storage_used_in_mb: int
-    network_usage_in_mb: int
-    network_avg_usage: int
     max_node_time: int
     used_note_time: int
 
@@ -67,11 +65,9 @@ class CenterElement:
         max_gpu_core_time = from_int(obj.get("maxGPUCoreTime"))
         used_gpu_coretime = from_int(obj.get("usedGPUCoretime"))
         storage_used_in_mb = from_int(obj.get("storageUsedInMB"))
-        network_usage_in_mb = from_int(obj.get("networkUsageInMB"))
-        network_avg_usage = from_int(obj.get("networkAvgUsage"))
         max_node_time = from_int(obj.get("maxNodeTime"))
         used_note_time = from_int(obj.get("usedNoteTime"))
-        return CenterElement(hpc_center_id, sub_hpc_center_id, start_periode, end_periode, max_cpu_core_time, used_cpu_coretime, max_gpu_core_time, used_gpu_coretime, storage_used_in_mb, network_usage_in_mb, network_avg_usage, max_node_time, used_note_time)
+        return CenterElement(hpc_center_id, sub_hpc_center_id, start_periode, end_periode, max_cpu_core_time, used_cpu_coretime, max_gpu_core_time, used_gpu_coretime, storage_used_in_mb, max_node_time, used_note_time)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -84,8 +80,6 @@ class CenterElement:
         result["maxGPUCoreTime"] = from_int(self.max_gpu_core_time)
         result["usedGPUCoretime"] = from_int(self.used_gpu_coretime)
         result["storageUsedInMB"] = from_int(self.storage_used_in_mb)
-        result["networkUsageInMB"] = from_int(self.network_usage_in_mb)
-        result["networkAvgUsage"] = from_int(self.network_avg_usage)
         result["maxNodeTime"] = from_int(self.max_node_time)
         result["usedNoteTime"] = from_int(self.used_note_time)
         return result

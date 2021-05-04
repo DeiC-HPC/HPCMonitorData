@@ -5,11 +5,11 @@ namespace DeiC_HPC_Usage_Data
     public class CenterDaily
     {
         /*
-         * Each HPC center has a unique ID. This is defined as a GUID
+         * Each HPC center has a unique ID. This is defined as a GUID/UUID
          */
         public Guid HPCCenterId { get; set; }
         /*
-         * In case of sub centers they can use a sub id. This is defined as a GUID
+         * In case of sub centers they can use a sub id. This is defined as a GUID/UUID
          */
         public Guid SubHPCCenterId { get; set; }
         /*
@@ -25,6 +25,13 @@ namespace DeiC_HPC_Usage_Data
          * It is based on https://www.iso.org/standard/44292.html
          */
         public string ORCID { get; set; }
+
+        /*
+         * A local id for the user. This must be the same for alle logins from that user.
+         * Whe national AAI is ready use the national id. This is the identity provided om the AAI.
+         */
+        public string LocalId { get; set; }
+
         /*
          * Each project that are assigned usage time have a generated project id. The format of the ID is string.
          * Change: From GUID to follow the DeiC project format: https://www.deic.dk/en/Supercomputing/Instructions-and-Guides/Remember-to-acknowledge-the-use-of-national-hpc

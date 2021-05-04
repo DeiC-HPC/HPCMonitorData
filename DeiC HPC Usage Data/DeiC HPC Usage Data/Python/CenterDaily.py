@@ -50,6 +50,7 @@ class CenterDailyElement:
     sub_hpc_center_id: UUID
     date: datetime
     orcid: str
+    localid: str
     deic_project_id: str
     university_id: int
     id_expanded: str
@@ -59,8 +60,6 @@ class CenterDailyElement:
     max_gpu_core_time: int
     used_gpu_coretime: int
     storage_used_in_gb: int
-    network_usage_in_gb: int
-    network_avg_usage: int
     max_node_time: int
     used_note_time: int
 
@@ -71,6 +70,7 @@ class CenterDailyElement:
         sub_hpc_center_id = UUID(obj.get("subHPCCenterId"))
         date = from_datetime(obj.get("date"))
         orcid = from_str(obj.get("orcid"))
+        localid = from_str(obj.get("localid"))
         deic_project_id = from_str(obj.get("deicProjectId"))
         university_id = from_int(obj.get("universityId"))
         id_expanded = from_str(obj.get("idExpanded"))
@@ -80,11 +80,9 @@ class CenterDailyElement:
         max_gpu_core_time = from_int(obj.get("maxGPUCoreTime"))
         used_gpu_coretime = from_int(obj.get("usedGPUCoretime"))
         storage_used_in_gb = from_int(obj.get("storageUsedInGB"))
-        network_usage_in_gb = from_int(obj.get("networkUsageInGB"))
-        network_avg_usage = from_int(obj.get("networkAvgUsage"))
         max_node_time = from_int(obj.get("maxNodeTime"))
         used_note_time = from_int(obj.get("usedNoteTime"))
-        return CenterDailyElement(hpc_center_id, sub_hpc_center_id, date, orcid, deic_project_id, university_id, id_expanded, access_type, max_cpu_core_time, used_cpu_coretime, max_gpu_core_time, used_gpu_coretime, storage_used_in_gb, network_usage_in_gb, network_avg_usage, max_node_time, used_note_time)
+        return CenterDailyElement(hpc_center_id, sub_hpc_center_id, date, orcid, localid, deic_project_id, university_id, id_expanded, access_type, max_cpu_core_time, used_cpu_coretime, max_gpu_core_time, used_gpu_coretime, storage_used_in_gb, max_node_time, used_note_time)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -92,6 +90,7 @@ class CenterDailyElement:
         result["subHPCCenterId"] = str(self.sub_hpc_center_id)
         result["date"] = self.date.isoformat()
         result["orcid"] = from_str(self.orcid)
+        result["localid"] = from_str(self.localid)
         result["deicProjectId"] = from_str(self.deic_project_id)
         result["universityId"] = from_int(self.university_id)
         result["idExpanded"] = from_str(self.id_expanded)
@@ -101,8 +100,6 @@ class CenterDailyElement:
         result["maxGPUCoreTime"] = from_int(self.max_gpu_core_time)
         result["usedGPUCoretime"] = from_int(self.used_gpu_coretime)
         result["storageUsedInGB"] = from_int(self.storage_used_in_gb)
-        result["networkUsageInGB"] = from_int(self.network_usage_in_gb)
-        result["networkAvgUsage"] = from_int(self.network_avg_usage)
         result["maxNodeTime"] = from_int(self.max_node_time)
         result["usedNoteTime"] = from_int(self.used_note_time)
         return result

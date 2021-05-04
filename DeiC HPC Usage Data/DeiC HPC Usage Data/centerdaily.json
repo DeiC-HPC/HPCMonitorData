@@ -4,6 +4,7 @@
     "subHPCCenterId": "00000000-0000-0000-0000-000000000000",
     "date": "0001-01-01T00:00:00",
     "orcid": "0000-0000-0000-0000",
+    "localId": "some unique id. uuid/guid.",
     "deicProjectId": "DeiC-XX-Y-NUMBER",
     "universityId": 0,
     "idExpanded": "Some text",
@@ -13,8 +14,6 @@
     "maxGPUCoreTime": 0,
     "usedGPUCoretime": 0,
     "storageUsedInGB": 0,
-    "networkUsageInGB": 0,
-    "networkAvgUsage": 0.0,
     "maxNodeTime": 0,
     "usedNoteTime": 0
   }

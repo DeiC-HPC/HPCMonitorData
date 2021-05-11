@@ -13,6 +13,7 @@ DeiC HPC projekt ID er beskrevet på https://www.deic.dk/Supercomputere/Vejledni
 ## Person
 Dette data er person centeret Man kan her se hvad personen har haft adgang til og brugt i den periode som er angivet i dataet. Man kan vælge have en antal perioder pr person bare der ikke er overlap mellem person-id, projekt-id og dato perioden. Det vil indeholde følgende felter. Data vil være en liste af disse.
 * ORCID ID (fortrækkes hvis forskeren har det) eller WAYF-ID. Et unikt ID.
+* LocalId er et lokalt id for det enkelte anlæg.
 *	DeiC-HPC Project ID, Dette er et projekt ID. Dette ID skal ses som en gruppe. Det er et unikt ID som f.eks kan deles mellem flere universiteter eller intern i en forsker gruppe.
 *	HPC Center ID, hvert national HPC center har et unikt ID.
 *	HPC Center Sub ID, Et national center kan have flere afdelinger. For den interne rapport og se fordelingen mellem disse kan man oplyse et under ID.
@@ -20,7 +21,6 @@ Dette data er person centeret Man kan her se hvad personen har haft adgang til o
 *	Id Expanded, Hvis man ikke er fra et universitet eller login ikke giver mulighed for at få uni id. Dette felt kan bruges som tekst.
 *	Assing Type, Valgmuligheder: Local, national, sandbox, international, andet.
 *	Access start date, dato for hvornår denne bruger har fået adgang. I ISO 8601 format.
-*	Access end date, dato for hvornår denne bruger ikke har adgang mere. I ISO 8601 format.
 *	CPU core time assigned
 *	CPU core time used
 *	GPU core time assigned
@@ -40,8 +40,6 @@ Dette bliver brugt til at se den totale tid i perioden. Det er for at kunne matc
 *	Max GPU core time, Hvor mange GPU timer kan anlægget tilbyde
 *	Actual CPU core time, Hvor mange GPU timer kunne bruges.
 *	Storage usage, hvor meget storage er brugt i perioden. I GB
-*	Network usage, hvor meget netværk data er flyttet i perioden. I GB
-*	Network trafic, avg network trafik. I Mbps/Gbps.
 *	Max Node time, for type 4 vi burger hele knuder.
 *	Actual node time, for type 4
 
@@ -63,6 +61,7 @@ Dette er en log linje pr dag pr center. Man kan følge brugen af et center pr da
 *	Universitet ID, hvert universitet har et ID.
 *	Id Expanded, Hvis man ikke er fra et universitet eller login ikke giver mulighed for at få uni id. Dette felt kan bruges som tekst.
 *	ORCID ID (fortrækkes hvis forskeren har det) eller WAYF-ID. Et unikt ID.
+*	LocalIf er et ID lokalt for det enkelte anlæg.
 *	DeiC-HPC Project ID, Dette er et projekt ID. Dette ID skal ses som en gruppe. Det er et unikt ID som f.eks kan deles mellem flere universiteter eller intern i en forsker gruppe.
 
 

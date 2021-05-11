@@ -11,5 +11,7 @@
         RUC = 6,
         ITU = 7,
         CBS = 8,
+        INDUSTRY = 9,
+        OTHER = 10,
     }
 }

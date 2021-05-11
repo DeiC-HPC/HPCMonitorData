@@ -13,8 +13,11 @@ netcore build "DeiC HPC Usage Data"
 
 Link for json files: [look here](https://github.com/DeiC-HPC/HPCMonitorData/tree/master/DeiC%20HPC%20Usage%20Data)
 
-Missing:
- - Tools to verify data before upload.
+[Notat on the fields can be found here](notat.md)
+
+Missing
+ - alligned check of data between centerdauky and person
+ - GDPR safe way to get unique user ids
 
 
 

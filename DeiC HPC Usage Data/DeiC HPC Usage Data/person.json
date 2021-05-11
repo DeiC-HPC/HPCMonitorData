@@ -1,13 +1,14 @@
 [
   { // Person
-    "orcid": null,
-    "deicProjectId": "00000000-0000-0000-0000-000000000000",
+    "orcid": "0000-0000-0000-0000",
+    "localId" : "some unique id. uuid/guid.",
+    "deicProjectId": "DeiC-XX-Y-NUMBER",
     "hpcCenterId": "00000000-0000-0000-0000-000000000000",
     "subHPCCenterId": "00000000-0000-0000-0000-000000000000",
     "universityId": 0,
+    "idExpanded": "some text",
     "accessType": 0,
     "accessStartDate": "0001-01-01T00:00:00",
-    "accessEndDate": "0001-01-01T00:00:00",
     "cpuCoreTimeAssigned": 0,
     "cpuCoreTimeUsed": 0,
     "gpuCoreTimeAssigned": 0,

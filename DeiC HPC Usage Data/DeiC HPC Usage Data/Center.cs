@@ -5,19 +5,23 @@ namespace DeiC_HPC_Usage_Data
     public class Center
     {
         /*
-         * Each HPC center has a unique ID. This is defined as a GUID
+         * Each HPC center has a unique ID. This is defined as a GUID/uuid
          */
         public Guid HPCCenterId { get; set; }
         /*
-         * In case of sub centers they can use a sub id. This is defined as a GUID
+         * In case of sub centers they can use a sub id. This is defined as a GUID/uuid
          */
         public Guid SubHPCCenterId { get; set; }
         /*
         * Start time report periode in ISO 8601 format.
+        * Please ensure to a correct ISO8601-1:2019 date format.
+         * Access time https://en.wikipedia.org/wiki/ISO_8601
         */
         public DateTime StartPeriode { get; set; }
         /*
         * End time report periode in ISO 8601 format.
+        * Please ensure to a correct ISO8601-1:2019 date format.
+         * Access time https://en.wikipedia.org/wiki/ISO_8601
         */
         public DateTime EndPeriode { get; set; }
         /*
@@ -40,14 +44,6 @@ namespace DeiC_HPC_Usage_Data
          * Storage space in MB for the period
          */
         public ulong StorageUsedInMB { get; set; }
-        /*
-         * Network usage in MB for the period
-         */
-        public ulong NetworkUsageInMB { get; set; }
-        /*
-         * Network avg in Mbps for the period
-         */
-        public double NetworkAvgUsage { get; set; }
         /*
          * Max node time. For Type 4 only as they do not have CPU/GPU core times.
          */

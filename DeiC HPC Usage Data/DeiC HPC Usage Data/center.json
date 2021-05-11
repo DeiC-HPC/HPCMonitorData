@@ -9,8 +9,6 @@
     "maxGPUCoreTime": 0,
     "usedGPUCoretime": 0,
     "storageUsedInMB": 0,
-    "networkUsageInMB": 0,
-    "networkAvgUsage": 0.0,
     "maxNodeTime": 0,
     "usedNoteTime": 0
   }
